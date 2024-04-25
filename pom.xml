@@ -116,15 +116,24 @@
 		</plugins>
 	</build>
 
-	<distributionManagement>
 		<repository>
-			<id>maven-releases</id>
-			<url>http://35.207.247.57:8081/repository/maven-releases/</url>
-		</repository>
-		<snapshotRepository>
-			<id>maven-snapshots</id>
-			<url>http://35.207.247.57:8081/repository/maven-snapshots/</url>
-		</snapshotRepository>
+	<id>maven-releases</id>
+	<name>maven-releases</name>
+	<url>http://35.207.247.57:8081/repository/maven-releases/</url>
+	</repository>
+
+
+		<distributionManagement>
+	<repository>
+		<id>maven-releases</id>
+		<!-- CHANGE HERE by your team Nexus server -->
+		<url>http://35.207.247.57:8081/repository/maven-releases/</url>
+	</repository>
+	<snapshotRepository>
+		<id>maven-snapshots</id>
+		<!-- CHANGE HERE by your team Nexus server -->
+		<url>http://35.207.247.57:8081/repository/maven-snapshots/</url>
+	</snapshotRepository>
 	</distributionManagement>
 
 
