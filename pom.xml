@@ -116,12 +116,6 @@
 		</plugins>
 	</build>
 
-		<repository>
-	<id>maven-releases</id>
-	<name>maven-releases</name>
-	<url>http://35.207.247.57:8081/repository/maven-releases/</url>
-	</repository>
-
 
 		<distributionManagement>
 	<repository>
