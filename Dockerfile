@@ -14,11 +14,12 @@ FROM adoptopenjdk/openjdk11 AS builder
 
 WORKDIR /app
 
-COPY . .  
-RUN mvn package -DskipTests
+COPY . .  # Copy your entire project here
+RUN mvn package -DskipTests  # Build your project (replace with your build command)
 
-# Combine the lines:
-FROM openjdk:11-slim COPY --from=builder /app/target/*.jar $APP_HOME/app.jar
+# Separate lines for FROM and COPY
+FROM openjdk:11-slim
+COPY --from=builder /app/target/*.jar $APP_HOME/app.jar
 
 WORKDIR $APP_HOME
 
