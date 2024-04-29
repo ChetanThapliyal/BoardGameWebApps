@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk11
+FROM Librarian/openjdk-slim
 
 EXPOSE 8080
 
